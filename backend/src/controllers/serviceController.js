@@ -15,7 +15,7 @@ export const createService = async (req, res) => {
 
 ///////////////// GET SERVICES
 export const getServices = async (req, res) => {
-  const services = await Service.find({ isActive: true });
+  const services = await Service.find();
   res.json(services);
 };
 
@@ -36,14 +36,11 @@ export const updateService = async (req, res) => {
 
 ///DELETE SERVICES 
 export const deleteService = async (req, res) => {
-  const service = await Service.findById(req.params.id);
+  const service = await Service.findByIdAndDelete(req.params.id);
 
   if (!service) {
     return res.status(404).json({ message: "Service not found" });
   }
 
-  service.isActive = false;
-  await service.save();
-
-  res.json({ message: "Service disabled" });
+  res.json({ message: "Service deleted" });
 };
