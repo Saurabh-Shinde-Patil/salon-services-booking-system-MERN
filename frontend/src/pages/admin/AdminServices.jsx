@@ -30,6 +30,13 @@ const AdminServices = () => {
     fetchServices();
   };
 
+  const handleDelete = async (id) => {
+    if (window.confirm("Are you sure you want to delete this service?")) {
+      await api.delete(`/services/${id}`);
+      fetchServices();
+    }
+  };
+
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Manage Services</h1>
@@ -79,6 +86,12 @@ const AdminServices = () => {
             <h2 className="font-semibold">{s.name}</h2>
             <p>₹{s.price}</p>
             <p>{s.duration} mins</p>
+            <button
+              onClick={() => handleDelete(s._id)}
+              className="mt-2 bg-red-600 text-white px-3 py-1 rounded"
+            >
+              Delete
+            </button>
           </div>
         ))}
       </div>

@@ -12,8 +12,8 @@ const Navbar = () => {
 
                 {(user.role === "admin" || user.role === "superadmin") && (
                     <>
-                        <Link to="/admin/services" className="hover:underline">Admin Services</Link>
-                        <Link to="/admin/bookings" className="hover:underline">Admin Bookings</Link>
+                        <Link to="/admin/services" className="hover:underline">ADD SERVICES</Link>
+                        <Link to="/admin/bookings" className="hover:underline">Manage Bookings</Link>
                     </>
                 )}
 
