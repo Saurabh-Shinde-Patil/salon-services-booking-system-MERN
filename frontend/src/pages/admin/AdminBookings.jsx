@@ -29,9 +29,9 @@ const AdminBookings = () => {
             className="border p-4 rounded shadow"
           >
             <h2 className="font-semibold">
-              {b.service.name}
+              {b.service?.name}
             </h2>
-            <p>User: {b.user.name}</p>
+            <p>User: {b.user?.name}</p>
             <p>Date: {b.date}</p>
             <p>Time: {b.time}</p>
             <p>Status: {b.status}</p>
