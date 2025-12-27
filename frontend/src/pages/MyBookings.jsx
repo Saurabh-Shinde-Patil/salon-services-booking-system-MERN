@@ -21,7 +21,7 @@ const MyBookings = () => {
             className="border p-4 rounded shadow"
           >
             <h2 className="font-semibold">
-              {b.service.name}
+              {b.service?.name}
             </h2>
             <p>Date: {b.date}</p>
             <p>Time: {b.time}</p>
