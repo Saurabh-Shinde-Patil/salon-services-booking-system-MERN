@@ -23,21 +23,22 @@ const BookService = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-800">
       <form
         onSubmit={handleBooking}
-        className="bg-white p-6 rounded shadow w-80"
+        className="text-gray-900 dark:text-white p-6 rounded shadow w-80 "
       >
         <h2 className="text-xl font-semibold mb-4">
           Book Service
         </h2>
+
 
         <label className="block mb-2">Date</label>
         <input
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          className="w-full mb-4 border px-3 py-2 rounded"
+          className="w-full mb-4 border px-3 py-2 rounded text-black"
           required
         />
 
@@ -46,7 +47,7 @@ const BookService = () => {
           type="time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
-          className="w-full mb-4 border px-3 py-2 rounded"
+          className="w-full mb-4 border px-3 py-2 rounded text-black"
           required
         />
 

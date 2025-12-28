@@ -23,16 +23,16 @@ const AdminBookings = () => {
       <h1 className="text-2xl font-bold mb-4">All Bookings</h1>
 
       <div className="space-y-3">
-        {bookings.map((b) => (
+        {[...bookings].reverse().map((b) => (
           <div
             key={b._id}
-            className="border p-4 rounded shadow"
+            className="border p-4 rounded shadow bg-white dark:bg-gray-800"
           >
             <h2 className="font-semibold">
               {b.service?.name}
             </h2>
             <p>User: {b.user?.name}</p>
-            <p>Date: {b.date}</p>
+            <p>Date: {new Date(b.date).toLocaleDateString()}</p>
             <p>Time: {b.time}</p>
             <p>Status: {b.status}</p>
 

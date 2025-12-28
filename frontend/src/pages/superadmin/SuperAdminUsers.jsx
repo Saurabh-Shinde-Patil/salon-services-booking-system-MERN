@@ -30,15 +30,15 @@ const SuperAdminUsers = () => {
       </h1>
 
       <div className="space-y-3">
-        {users.map((u) => (
+        {[...users].reverse().map((u) => (
           <div
             key={u._id}
-            className="border p-4 rounded flex justify-between items-center"
+            className="border p-4 rounded flex justify-between items-center bg-white dark:bg-gray-800"
           >
             <div>
               <p className="font-semibold">{u.name}</p>
               <p className="text-sm">{u.email}</p>
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-600 dark:text-gray-400">
                 Role: {u.role}
               </p>
             </div>
