@@ -14,7 +14,14 @@ import UserProfile from "./pages/UserProfile";
 function App() {
   const { user, loading } = useAuth();
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <div className="min-h-screen grid place-items-center">
+  <div className="flex flex-col items-center gap-3 ">
+    <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-300 border-t-gray-700"></div>
+    <p className="text-gray-900 dark:text-white font-semibold ">Loading...</p>
+    <p className="text-gray-900 dark:text-white font-extrabold">SHREE MEN'S SALON</p>
+  </div>
+</div>
+
 
   return (
     <div>
