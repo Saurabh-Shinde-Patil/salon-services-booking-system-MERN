@@ -9,6 +9,7 @@ import AdminServices from "./pages/admin/AdminServices";
 import AdminBookings from "./pages/admin/AdminBookings";
 import Navbar from "./components/Navbar";
 import SuperAdminUsers from "./pages/superadmin/SuperAdminUsers";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   const { user, loading } = useAuth();
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" element={<Services />} />
             <Route path="/book/:id" element={<BookService />} />
             <Route path="/my-bookings" element={<MyBookings />} />
+            <Route path="/profile" element={<UserProfile />} />
 
             {/* Admin routes - accessible by admin and superadmin */}
             {(user.role === "admin" || user.role === "superadmin") && (

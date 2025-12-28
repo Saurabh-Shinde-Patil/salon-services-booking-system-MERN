@@ -24,12 +24,12 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-6 w-80 rounded shadow"
+        className="bg-white dark:bg-gray-800 p-6 w-80 rounded shadow-md"
       >
-        <h2 className="text-xl font-semibold text-center mb-4">
+        <h2 className="text-xl font-semibold text-center mb-4 text-gray-900 dark:text-white">
           Login
         </h2>
 
@@ -39,7 +39,7 @@ const Login = () => {
           name="email"
           placeholder="Email"
           onChange={handleChange}
-          className="w-full mb-3 px-3 py-2 border rounded"
+          className="w-full mb-3 px-3 py-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600"
         />
 
         <input
@@ -47,13 +47,13 @@ const Login = () => {
           type="password"
           placeholder="Password"
           onChange={handleChange}
-          className="w-full mb-4 px-3 py-2 border rounded"
+          className="w-full mb-4 px-3 py-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600"
         />
 
-        <button className="w-full bg-blue-600 text-white py-2 rounded">
+        <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
           Login
         </button>
-        <p className="text-center mt-4">
+        <p className="text-center mt-4 text-gray-900 dark:text-white">
           Don't have an account?{" "}
           <Link to="/register" className="text-blue-600 hover:underline">
             Register

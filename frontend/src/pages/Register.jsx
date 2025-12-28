@@ -29,12 +29,12 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-6 rounded shadow w-80"
+        className="bg-white dark:bg-gray-800 p-6 rounded shadow-md w-80"
       >
-        <h2 className="text-xl font-semibold text-center mb-4">
+        <h2 className="text-xl font-semibold text-center mb-4 text-gray-900 dark:text-white">
           Register
         </h2>
 
@@ -42,7 +42,7 @@ const Register = () => {
           name="name"
           placeholder="Name"
           onChange={handleChange}
-          className="w-full mb-3 px-3 py-2 border rounded"
+          className="w-full mb-3 px-3 py-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600"
           required
         />
 
@@ -50,7 +50,7 @@ const Register = () => {
           name="email"
           placeholder="Email"
           onChange={handleChange}
-          className="w-full mb-3 px-3 py-2 border rounded"
+          className="w-full mb-3 px-3 py-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600"
           required
         />
 
@@ -59,15 +59,15 @@ const Register = () => {
           type="password"
           placeholder="Password"
           onChange={handleChange}
-          className="w-full mb-4 px-3 py-2 border rounded"
+          className="w-full mb-4 px-3 py-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600"
           required
         />
 
-        <button className="w-full bg-green-600 text-white py-2 rounded">
+        <button className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
           Register
         </button>
 
-        <p className="text-sm text-center mt-3">
+        <p className="text-sm text-center mt-3 text-gray-900 dark:text-white">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-600 hover:underline">
             Login
